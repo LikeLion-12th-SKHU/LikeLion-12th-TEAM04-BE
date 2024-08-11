@@ -12,8 +12,6 @@ jobs:
     runs-on: ubuntu-22.04 
     env:
       working-directory: neighbor
-      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_LOGIN_USERNAME }}
-      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_LOGIN_ACCESSTOKEN }}
 
     steps: 
     - name: 체크아웃
@@ -72,7 +70,7 @@ jobs:
         host: ${{ secrets.RELEASE_SERVER_IP }}
         username: ${{ secrets.RELEASE_SERVER_USER }}
         key: ${{ secrets.RELEASE_SERVER_KEY }}
-        script: |
-          docker rm -f neighbor-8080
-          docker image pull sss4920/neighbor
-          docker run -d --name neighbor-8080 -p 8080:8080 sss4920/neighbor
+        run: |
+          cd ~
+          chmod +x deploy.sh
+          ./deploy.sh
