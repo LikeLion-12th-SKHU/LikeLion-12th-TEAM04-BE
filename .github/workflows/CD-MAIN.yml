@@ -73,6 +73,6 @@ jobs:
         username: ${{ secrets.RELEASE_SERVER_USER }}
         key: ${{ secrets.RELEASE_SERVER_KEY }}
         run: |
-					cd ~
-		 			chmod +x deploy.sh
-	  			./deploy.sh
+	cd ~
+	chmod +x deploy.sh
+	./deploy.sh
