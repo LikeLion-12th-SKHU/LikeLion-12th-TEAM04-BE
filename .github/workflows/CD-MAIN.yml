@@ -12,8 +12,6 @@ jobs:
     runs-on: ubuntu-22.04 
     env:
       working-directory: neighbor
-      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_LOGIN_USERNAME }}
-      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_LOGIN_ACCESSTOKEN }}
 
     steps: 
     - name: 체크아웃
