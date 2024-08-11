@@ -73,6 +73,6 @@ jobs:
         username: ${{ secrets.RELEASE_SERVER_USER }}
         key: ${{ secrets.RELEASE_SERVER_KEY }}
         script: |
-          docker rm -f neighbor
+          docker rm -f neighbor-8080
           docker image pull sss4920/neighbor
           docker run -d --name neighbor-8080 -p 8080:8080 sss4920/neighbor
