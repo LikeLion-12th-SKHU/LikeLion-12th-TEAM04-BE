@@ -72,6 +72,7 @@ jobs:
         host: ${{ secrets.RELEASE_SERVER_IP }}
         username: ${{ secrets.RELEASE_SERVER_USER }}
         key: ${{ secrets.RELEASE_SERVER_KEY }}
-        script: |
-	  			cd ~
-					./deploy.sh
+        run: |
+					cd ~
+		 			chmod +x deploy.sh
+	  			./deploy.sh
