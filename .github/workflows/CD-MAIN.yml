@@ -73,5 +73,5 @@ jobs:
         key: ${{ secrets.RELEASE_SERVER_KEY }}
         run: |
           cd ~
-          chmod +x deploy.sh
+          sudo chmod +x deploy.sh
           ./deploy.sh
